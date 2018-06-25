@@ -8,4 +8,4 @@ def pow(a:float, n:int):
     else:
         return pow(a**2,n//2)
 
-print(pow(5,5))
+print(pow(5,25))
