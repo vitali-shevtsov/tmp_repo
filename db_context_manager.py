@@ -23,12 +23,12 @@ class UseDatabase:
         self.conn.close()
   
 with UseDatabase() as cursor:
-	cursor.execute("SELECT * FROM `table` WHERE 1")
-	select = [x[0] for x in cursor.fetchall()]
+    cursor.execute("SELECT * FROM `table` WHERE 1")
+    select = [x[0] for x in cursor.fetchall()]
 
-	_SQL = ("""UPDATE table2 
-	           SET value1=%s,value2=%s 
-			   WHERE value3=%s 
-			   AND value4=%s""")
+    _SQL = ("""UPDATE table2 
+               SET value1=%s,value2=%s 
+               WHERE value3=%s 
+	       AND value4=%s""")
     a,b,c,d = 1,2,3,4
-	cursor.execute(_SQL, (a,b,c,d))
+    cursor.execute(_SQL, (a,b,c,d))
